@@ -16,11 +16,21 @@
     var headerPosition = [];
     var currentSlideIndex = 0;
 
-    function keydownEventHandler(e) {console.log(e);
+    function keydownEventHandler(e) {
         if(e.which == 37) {
-            slideTo(--currentSlideIndex);
+            if(0 < currentSlideIndex) {
+                currentSlideIndex--;
+            } else {
+                currentSlideIndex = 0;
+            }
+            slideTo(currentSlideIndex);
         } else if(e.which == 39) {
-            slideTo(++currentSlideIndex);
+            if(currentSlideIndex < headerPosition.length) {
+                currentSlideIndex++;
+            } else {
+                currentSlideIndex = headerPosition.length;
+            }
+            slideTo(currentSlideIndex);
         }
     }
 
