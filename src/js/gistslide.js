@@ -4,8 +4,12 @@
     var doc = win.document;
     var slice = [].slice;
 
-	var qs = doc.querySelector;
-	var qsa = doc.querySelectorAll;
+	var qs = function(selector) {
+		return doc.querySelector(selector);
+	};
+	var qsa = function(selector) {
+		return doc.querySelectorAll(selector);
+	};
 
 	var KEYCODE_LEFT = 37;
 	var KEYCODE_UP = 38;
