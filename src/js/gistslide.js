@@ -25,8 +25,11 @@
     }
 
     function slideTo(index) {
-        var position = (headerPosition.length < index) ? 0 : headerPosition[index];
-        window.scrollTo(position);
+        if(index < 0 || headerPosition.length < index) {
+            window.scrollTo(0, 0);
+        } else {
+            window.scrollTo(0, headerPosition[index]);
+        }
     }
 
     function initializeGist() {
