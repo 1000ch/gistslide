@@ -15,14 +15,11 @@
 
     var headerPosition = [];
     var currentSlideIndex = 0;
-    function calcCurrentIndex() {}
 
-    function keydownEventHandler(e) {
+    function keydownEventHandler(e) {console.log(e);
         if(e.which == 37) {
-            currentSlideIndex = calcCurrentIndex();
             slideTo(--currentSlideIndex);
         } else if(e.which == 39) {
-            currentSlideIndex = calcCurrentIndex();
             slideTo(++currentSlideIndex);
         }
     }
@@ -66,13 +63,13 @@
         initializeGist();
 
         //cache header positions
-        var headerLevel1 = slice.call(doc.getElementsByTagName('h1'));
-        var headerLevel2 = slice.call(doc.getElementsByTagName('h2'));
-        var headerArray = headerLevel1.concat(headerLevel2);
+        var header1 = slice.call(doc.getElementsByTagName('h1'));
+        var header2 = slice.call(doc.getElementsByTagName('h2'));
+        var headerArray = header1.concat(header2);
         for(var i = 0, len = headerArray.length;i < len;i++) {
             headerPosition.push(headerArray[i].offsetTop);
         }
-        headerPosition.sort();console.log(headerPosition);
+        headerPosition.sort();
 
         //listen keydown event
         doc.addEventListener('keydown', keydownEventHandler);
