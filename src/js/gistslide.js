@@ -12,6 +12,7 @@
         return node;
     }
 
+    var headerPosition = [];
     var currentSlideIndex = 0;
     function calcCurrentIndex() {}
 
@@ -25,7 +26,10 @@
         }
     }
 
-    function slideTo() {}
+    function slideTo(index) {
+        var position = (headerPosition.length < index) ? 0 : headerPosition[index];
+        window.scrollTo(position);
+    }
 
     (function() {
         //create link node
@@ -36,6 +40,11 @@
 
         //insert nodes into head tail
         doc.querySelector("head").appendChild(js);
+
+        var headerArray = [].concat(doc.getElementsByTagName("h1")).concat(doc.getElementsByTagName("h2"));
+        for(var i = 0, len = headerArray.length;i < len;i++) {
+            console.log(headerArray[i].scrollTop);
+        }
 
         //listen keydown event
         doc.addEventListener("keydown", keydownEventHandler);
