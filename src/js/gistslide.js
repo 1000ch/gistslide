@@ -33,22 +33,22 @@
 
     (function() {
         //create link node
-        var css = createNode("link", {
-            rel: "stylesheet",
-            href: "https://raw.github.com/1000ch/gistdeck/master/src/css/gistslide.css"
+        var css = createNode('link', {
+            rel: 'stylesheet',
+            href: 'https://raw.github.com/1000ch/gistdeck/master/src/css/gistslide.css'
         });
 
         //insert nodes into head tail
-        doc.querySelector("head").appendChild(js);
+        doc.querySelector('head').appendChild(js);
 
-        var headerArray = [].concat(doc.getElementsByTagName("h1")).concat(doc.getElementsByTagName("h2"));
+        var headerArray = [].concat(doc.getElementsByTagName('h1')).concat(doc.getElementsByTagName('h2'));
         for(var i = 0, len = headerArray.length;i < len;i++) {
             console.log(headerArray[i].scrollTop);
         }
 
         //listen keydown event
-        doc.addEventListener("keydown", keydownEventHandler);
+        doc.addEventListener('keydown', keydownEventHandler);
     })();
 
 })();
-alert("inserted");
+alert('inserted');
