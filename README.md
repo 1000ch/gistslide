@@ -1,4 +1,4 @@
-# gistdeck
+# gistslide
 
 ## About
 
@@ -10,7 +10,7 @@ Coming soon...
 
 ## Problem?
 
-Please report [issues](https://github.com/1000ch/gistdeck/issues).  
+Please report [issues](https://github.com/1000ch/gistslide/issues).  
 
 ## Lisence
 
