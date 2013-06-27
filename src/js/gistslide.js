@@ -65,12 +65,14 @@
 
         initializeGist();
 
+        //cache header positions
         var headerLevel1 = slice.call(doc.getElementsByTagName('h1'));
         var headerLevel2 = slice.call(doc.getElementsByTagName('h2'));
         var headerArray = headerLevel1.concat(headerLevel2);
         for(var i = 0, len = headerArray.length;i < len;i++) {
-            console.log(headerArray[i].scrollTop);
+            headerPosition.push(headerArray[i].offsetTop);
         }
+        headerPosition.sort();
 
         //listen keydown event
         doc.addEventListener('keydown', keydownEventHandler);
