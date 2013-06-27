@@ -31,18 +31,11 @@
         //create link node
         var css = createNode("link", {
             rel: "stylesheet",
-            href: "https://raw.github.com/1000ch/gistdeck/master/src/css/gistdeck.css"
-        });
-
-        //create script node
-        var js = craeteNode("script", {
-            src: "https://raw.github.com/1000ch/gistdeck/master/src/js/gistdeck.js"
+            href: "https://raw.github.com/1000ch/gistdeck/master/src/css/gistslide.css"
         });
 
         //insert nodes into head tail
-        var head = doc.querySelector("head");
-        head.appendChild(css);
-        head.appendChild(js);
+        doc.querySelector("head").appendChild(js);
 
         //listen keydown event
         doc.addEventListener("keydown", keydownEventHandler);
