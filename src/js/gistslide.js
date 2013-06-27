@@ -72,7 +72,7 @@
         for(var i = 0, len = headerArray.length;i < len;i++) {
             headerPosition.push(headerArray[i].offsetTop);
         }
-        headerPosition.sort();
+        headerPosition.sort();console.log(headerPosition);
 
         //listen keydown event
         doc.addEventListener('keydown', keydownEventHandler);
