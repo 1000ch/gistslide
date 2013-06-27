@@ -32,12 +32,19 @@
     }
 
     function initializeGist() {
-        var panel = doc.querySelector(".root-pane");
-        panel.parentNode.removeChild(panel);
+        //hide left panel
+        doc.querySelector(".root-pane").style.display = "none";
 
+        //fix main content
         var column = doc.querySelector(".column");
         column.style.float = "none";
         column.style.width = "100%";
+
+        //hide other content
+        doc.querySelector(".js-comment-form").style.display = "none";
+        doc.getElementById("header").style.display = "none";
+        doc.querySelector(".pagehead").style.display = "none";
+        doc.getElementById("footer").style.display = "none";
     }
 
     (function() {
