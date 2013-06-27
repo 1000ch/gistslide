@@ -2,6 +2,7 @@
 
     var win = window;
     var doc = win.document;
+    var slice = [].slice;
 
     function createNode(tagName, param) {
         var node = doc.createElement(tagName);
@@ -48,6 +49,11 @@
     }
 
     (function() {
+        //if here is not gist@github
+        if(win.location.hostname != "gist.github.com") {
+            return;
+        }
+
         //create link node
         var css = createNode('link', {
             rel: 'stylesheet',
@@ -59,7 +65,9 @@
 
         initializeGist();
 
-        var headerArray = [].concat(doc.getElementsByTagName('h1')).concat(doc.getElementsByTagName('h2'));
+        var headerLevel1 = slice.call(doc.getElementsByTagName('h1'));
+        var headerLevel2 = slice.call(doc.getElementsByTagName('h2'));
+        var headerArray = headerLevel1.concat(headerLevel2);
         for(var i = 0, len = headerArray.length;i < len;i++) {
             console.log(headerArray[i].scrollTop);
         }
