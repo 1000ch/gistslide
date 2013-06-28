@@ -125,15 +125,17 @@
 
 	(function() {
 		//if here is not gist@github
-		if(win.location.hostname != "gist.github.com") {
+		if(win.location.hostname != 'gist.github.com') {
 			return;
 		}
+		//get hash string
+		var cssFile = win.location.hash.replace('#', '');
 
 		//create link node
 		var linkNode = createNode('link', {
 			rel: 'stylesheet',
 			type: 'text/css',
-			href: 'https://raw.github.com/1000ch/gistslide/master/src/css/themes/simple.css'
+			href: 'https://raw.github.com/1000ch/gistslide/master/src/css/themes/' + cssFile + '.css'
 		});
 
 		//insert nodes into head tail
