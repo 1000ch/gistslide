@@ -52,8 +52,8 @@
 	 */
 	function SlideContainer(headerElements) {
 		this.headerElements = headerElements;
-		this.headerOffsets = map.call(htmlElements, function(htmlElements) {
-			return htmlElements.offsetTop;
+		this.headerOffsets = map.call(this.headerElements, function(htmlElement) {
+			return htmlElement.offsetTop;
 		});
 		console.log(this.headerOffsets);
 		this.headerOffsets.sort(function(x, y) {
