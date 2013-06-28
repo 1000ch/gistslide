@@ -51,3 +51,135 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*
+# Image replacement
+*/
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+# Clearfix
+*/
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+html, body {
+  height: 100%;
+}
+
+.gs-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.gs-slide-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.theme-simple {
+  font-size: 48px;
+  font-size: 3.2vw;
+}
+.theme-simple .gs-slide-content {
+  position: relative;
+  padding: 2em;
+  background-color: #eeeeee;
+  line-height: 1.6;
+  color: #434343;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.theme-simple h1 {
+  font-size: 96px;
+  font-size: 4.8vw;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+.theme-simple h2 {
+  font-size: 72px;
+  font-size: 3.6vw;
+  border-bottom: 2px solid #cccccc;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+.theme-simple h3 {
+  font-size: 48px;
+  font-size: 3.2vw;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+.theme-simple p, .theme-simple ul, .theme-simple ol, .theme-simple li {
+  margin-bottom: 0.5em;
+}
+.theme-simple ul, .theme-simple ol {
+  margin-left: 1em;
+  padding-left: 1.5em;
+}
+.theme-simple ul {
+  list-style: disc;
+}
+.theme-simple ol {
+  list-style: decimal;
+}
+.theme-simple pre {
+  font-size: 32px;
+  font-size: 2vw;
+  padding: 1em;
+  background-color: #cccccc;
+}
+.theme-simple blockquote {
+  border-left: 5px solid #cccccc;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+.theme-simple img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.theme-simple em {
+  font-weight: bold;
+}
+.theme-simple b, .theme-simple strong {
+  font-weight: bold;
+  color: #20c88b;
+}
+.theme-simple a {
+  color: #434343;
+}

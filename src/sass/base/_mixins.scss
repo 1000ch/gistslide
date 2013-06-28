@@ -1,0 +1,10 @@
+@mixin font-size($vw,$px) {
+  font-size: $px + px;
+  font-size: $vw + vw;
+}
+
+@mixin box-sizing($value:border-box) {
+	-webkit-box-sizing: $value;
+	-moz-box-sizing: $value;
+	box-sizing: $value;
+}
