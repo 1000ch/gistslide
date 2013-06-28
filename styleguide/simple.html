@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>{title}</title>
+</head>
+<body class="theme-simple">
+<article class="markdown-body js-file js-task-list-container is-task-list-enabled" data-task-list-update-url="">
+  <h1>
+    <a name="h1" class="anchor" href="#h1">
+      <span class="mini-icon mini-icon-link"></span>
+    </a>
+    h1
+  </h1>
+
+  <h2>
+    <a name="h2" class="anchor" href="#h2">
+      <span class="mini-icon mini-icon-link"></span>
+    </a>
+    h2
+  </h2>
+
+  <h3>
+    <a name="h3" class="anchor" href="#h3">
+      <span class="mini-icon mini-icon-link"></span>
+    </a>
+    h3
+  </h3>
+
+  <hr>
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ol> 
+  <blockquote>
+    <p>quote</p>
+  </blockquote>
+
+  <div class="highlight">
+    <pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
+</pre>
+  </div>
+
+  <ul class="task-list">
+    <li class="task-list-item enabled">
+      <label>
+        <input type="checkbox" class="task-list-item-checkbox" checked="">
+        @mentions, #refs,
+        <a href="">links</a>
+        , <strong>formatting</strong>
+        , and <del>tags</del>
+        supported
+      </label>
+    </li>
+    <li class="task-list-item enabled">
+      <label>
+        <input type="checkbox" class="task-list-item-checkbox" checked="">
+        list syntax required (any unordered or ordered list supported)
+      </label>
+    </li>
+    <li class="task-list-item enabled">
+      <label>
+        <input type="checkbox" class="task-list-item-checkbox">this is a complete item</label>
+    </li>
+    <li class="task-list-item enabled">
+      <label>
+        <input type="checkbox" class="task-list-item-checkbox">this is an incomplete item</label>
+    </li>
+  </ul>
+</article>  
+</body>
+</html>
