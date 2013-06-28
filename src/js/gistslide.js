@@ -4,6 +4,7 @@
 	var win = window;
 	var doc = win.document;
 	var slice = [].slice;
+	var map = [].map;
 
 	/**
 	 * alias for document.querySelector
@@ -51,13 +52,14 @@
 	 */
 	function SlideContainer(headerElements) {
 		this.headerElements = headerElements;
-		this.headerOffsets = [];
-		for(var i = 0, len = this.headerElements.length;i < len;i++) {
-			this.headerOffsets.push(this.headerElements[i].offsetTop);
-		}
+		this.headerOffsets = map.call(htmlElements, function(htmlElements) {
+			return htmlElements.offsetTop;
+		});
+		console.log(this.headerOffsets);
 		this.headerOffsets.sort(function(x, y) {
 			return (x > y);
 		});
+		console.log(this.headerOffsets);
 		this.limitIndex = this.headerElements.length;
 		this.currentIndex = 0;
 		/**
