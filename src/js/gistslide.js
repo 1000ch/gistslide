@@ -120,6 +120,7 @@
 		//create link node
 		var linkNode = createNode('link', {
 			rel: 'stylesheet',
+			type: 'text/css',
 			href: 'https://raw.github.com/1000ch/gistslide/master/src/css/themes/simple.css'
 		});
 
