@@ -45,6 +45,13 @@
 		return node;
 	}
 
+	function wrapNode(targetNode, wrapNode) {
+		wrapNode.innerHTML = targetNode.cloneNode(true);
+		var parentNode = targetNode.parentNode;
+		parentNode.insertBefore(wrapNode, targetNode);
+		parentNode.removeChild(targetNode);
+	}
+
 	/**
 	 * slide container
 	 * @param headerElements
@@ -133,6 +140,11 @@
 		var header1 = slice.call(qsa('h1'));
 		var header2 = slice.call(qsa('h2'));
 		var container = new SlideContainer(header1.concat(header2));
+		container.headerElements.forEach(function(element) {
+			wrapNode(element, createNode("div", {
+				class: "sampleClass"
+			}));
+		});
 
 		//listen keydown event
 		doc.addEventListener('keydown', function(e) {
