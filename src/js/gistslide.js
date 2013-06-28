@@ -118,13 +118,13 @@
 		}
 
 		//create link node
-		var css = createNode('link', {
+		var linkNode = createNode('link', {
 			rel: 'stylesheet',
-			href: 'https://raw.github.com/1000ch/gistdeck/master/src/css/gistslide.css'
+			href: 'https://raw.github.com/1000ch/gistslide/master/src/css/themes/simple.css'
 		});
 
 		//insert nodes into head tail
-		//qs('head').appendChild(css);
+		qs('head').appendChild(linkNode);
 
 		initializeGist();
 
