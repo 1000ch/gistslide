@@ -46,7 +46,7 @@
 	}
 
 	function wrapNode(targetNode, wrapNode) {
-		wrapNode.innerHTML = targetNode.cloneNode(true);
+		wrapNode.appendChild(targetNode.cloneNode(true));
 		var parentNode = targetNode.parentNode;
 		parentNode.insertBefore(wrapNode, targetNode);
 		parentNode.removeChild(targetNode);
