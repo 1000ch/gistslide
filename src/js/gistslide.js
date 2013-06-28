@@ -45,6 +45,11 @@
 		return node;
 	}
 
+	/**
+	 * wrap node
+	 * @param {HTMLElement} targetNode
+	 * @param {HTMLElement} wrapNode
+	 */
 	function wrapNode(targetNode, wrapNode) {
 		wrapNode.appendChild(targetNode.cloneNode(true));
 		var parentNode = targetNode.parentNode;
