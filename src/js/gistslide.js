@@ -52,11 +52,11 @@
 	 */
 	function SlideContainer(headerElements) {
 		this.headerElements = headerElements;
+		this.headerElements.sort(function(x, y) {
+			return parseInt(x.offsetTop, 10) > parseInt(y.offsetTop);
+		});
 		this.headerOffsets = map.call(this.headerElements, function(htmlElement) {
 			return htmlElement.offsetTop;
-		});
-		this.headerOffsets.sort(function(x, y) {
-			return (parseInt(x, 10) > parseInt(y, 10));
 		});
 		this.limitIndex = this.headerElements.length;
 		this.currentIndex = 0;
