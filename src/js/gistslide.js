@@ -55,11 +55,9 @@
 		this.headerOffsets = map.call(this.headerElements, function(htmlElement) {
 			return htmlElement.offsetTop;
 		});
-		console.log(this.headerOffsets);
 		this.headerOffsets.sort(function(x, y) {
-			return (x > y);
+			return (parseInt(x, 10) > parseInt(y, 10));
 		});
-		console.log(this.headerOffsets);
 		this.limitIndex = this.headerElements.length;
 		this.currentIndex = 0;
 		/**
