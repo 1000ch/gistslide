@@ -197,16 +197,13 @@
 		});
 		var slideContainers = qsa(".gs-slide-content");
 		forEach.call(slideContainers, function(slideContainer) {
-			console.log("slideContainer");
-			console.log(slideContainer);
-			console.log("slideContainer.nextSibling");
-			console.log(slideContainer.nextSibling);
+			var moveNodeList = [];
 			var element = getSibling(slideContainer);
 			while(element && !element.classList.contains("gs-slide-content")) {
-				console.log(element);
-				moveNode(element, slideContainer);
+				moveNodeList.push(element);
 				element = getSibling(element);
 			}
+			console.log(moveNodeList);
 		});
 
 		//var container = new SlideContainer();
