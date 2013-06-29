@@ -190,7 +190,7 @@
 		//move article.markdown-body to body
 		moveNode(qs(".markdown-body"), document.body);
 
-		initializeGist();
+		//initializeGist();
 
 		//cache header positions
 		var header1 = slice.call(qsa('h1'));
