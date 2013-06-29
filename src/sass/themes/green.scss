@@ -4,20 +4,24 @@
 @import "../base/utilities";
 @import "../base/slide";
 
-$bgColor: #EEEEEE;
-$textColor: #434343;
-$textSubColor: #CCCCCC;
-$accentColor: #20C88B;
+$bgColor: #688E2B;
+$textColor: #27360F;
+$accentColor: #EFEFEE;
 
-
-// Simple
-.theme-simple {
+// Green
+.theme-green {
   @include font-size(3.2,48);
+  background: $bgColor;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(104,142,43,1) 0%, rgba(99,140,33,1) 44%, rgba(57,130,53,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(104,142,43,1)), color-stop(44%,rgba(99,140,33,1)), color-stop(100%,rgba(57,130,53,1)));
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(104,142,43,1) 0%,rgba(99,140,33,1) 44%,rgba(57,130,53,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover,  rgba(104,142,43,1) 0%,rgba(99,140,33,1) 44%,rgba(57,130,53,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(104,142,43,1) 0%,rgba(99,140,33,1) 44%,rgba(57,130,53,1) 100%);
+  background: radial-gradient(ellipse at center,  rgba(104,142,43,1) 0%,rgba(99,140,33,1) 44%,rgba(57,130,53,1) 100%);
+  background-attachment: fixed;
   .gs-slide-content {
     position: relative;
     padding: 2em;
-    background-color: $bgColor;
-    line-height: 1.6;
     color: $textColor;
     @include box-sizing;
   }
@@ -30,13 +34,14 @@ $accentColor: #20C88B;
     width: 100%;
     font-weight: bold;
     text-align: center;
+    color: $accentColor;
   }
   h2 {
     @include font-size(3.6,72);
-    border-bottom: 2px solid $textSubColor;
     margin-bottom: 0.5em;
     font-weight: bold;
     padding-bottom: 0.5em;
+    color: $accentColor;
   }
   h3 {
     @include font-size(3.2,48);
@@ -59,10 +64,9 @@ $accentColor: #20C88B;
   pre {
     @include font-size(2.0,32);
     padding: 1em;
-    background-color: $textSubColor;
   }
   blockquote {
-    border-left: 5px solid $textSubColor;
+    border-left: 10px solid $accentColor;
     margin-left: 1em;
     padding-left: 1em;
   }
@@ -77,9 +81,9 @@ $accentColor: #20C88B;
   }
   b,strong {
     font-weight: bold;
-    color: $accentColor;
   }
   a {
     color: $textColor;
+    text-decoration: wavy;
   }
 }

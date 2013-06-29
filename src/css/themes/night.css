@@ -105,22 +105,22 @@ html, body {
   height: 100%;
 }
 
-.theme-simple {
+.theme-night {
   font-size: 48px;
   font-size: 3.2vw;
 }
-.theme-simple .gs-slide-content {
+.theme-night .gs-slide-content {
   position: relative;
   padding: 2em;
-  background-color: #eeeeee;
+  background-color: #3e4360;
   line-height: 1.6;
-  color: #434343;
+  color: #f7eacb;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.theme-simple h1,
-.theme-simple .gist-description {
+.theme-night h1,
+.theme-night .gist-description {
   font-size: 96px;
   font-size: 4.8vw;
   position: absolute;
@@ -130,57 +130,56 @@ html, body {
   font-weight: bold;
   text-align: center;
 }
-.theme-simple h2 {
+.theme-night h2 {
   font-size: 72px;
   font-size: 3.6vw;
-  border-bottom: 2px solid #cccccc;
   margin-bottom: 0.5em;
   font-weight: bold;
   padding-bottom: 0.5em;
 }
-.theme-simple h3 {
+.theme-night h3 {
   font-size: 48px;
   font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.theme-simple p, .theme-simple ul, .theme-simple ol, .theme-simple li {
+.theme-night p, .theme-night ul, .theme-night ol, .theme-night li {
   margin-bottom: 0.5em;
 }
-.theme-simple ul, .theme-simple ol {
+.theme-night ul, .theme-night ol {
   margin-left: 1em;
   padding-left: 1.5em;
 }
-.theme-simple ul {
+.theme-night ul {
   list-style: disc;
 }
-.theme-simple ol {
+.theme-night ol {
   list-style: decimal;
 }
-.theme-simple pre {
+.theme-night pre {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
-  background-color: #cccccc;
 }
-.theme-simple blockquote {
-  border-left: 5px solid #cccccc;
+.theme-night blockquote {
+  border-left: 10px solid #f7d33a;
   margin-left: 1em;
   padding-left: 1em;
 }
-.theme-simple img {
+.theme-night img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-.theme-simple em {
+.theme-night em {
   font-weight: bold;
 }
-.theme-simple b, .theme-simple strong {
+.theme-night b, .theme-night strong {
   font-weight: bold;
-  color: #20c88b;
+  color: #f7d33a;
 }
-.theme-simple a {
-  color: #434343;
+.theme-night a {
+  color: #f7eacb;
+  text-decoration: wavy;
 }

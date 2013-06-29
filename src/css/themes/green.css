@@ -105,22 +105,28 @@ html, body {
   height: 100%;
 }
 
-.theme-simple {
+.theme-green {
   font-size: 48px;
   font-size: 3.2vw;
+  background: #688e2b;
+  background: -moz-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #688e2b), color-stop(44%, #638c21), color-stop(100%, #398235));
+  background: -webkit-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
+  background: -o-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
+  background: radial-gradient(ellipse at center, #688e2b 0%, #638c21 44%, #398235 100%);
+  background-attachment: fixed;
 }
-.theme-simple .gs-slide-content {
+.theme-green .gs-slide-content {
   position: relative;
   padding: 2em;
-  background-color: #eeeeee;
-  line-height: 1.6;
-  color: #434343;
+  color: #27360f;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.theme-simple h1,
-.theme-simple .gist-description {
+.theme-green h1,
+.theme-green .gist-description {
   font-size: 96px;
   font-size: 4.8vw;
   position: absolute;
@@ -129,58 +135,58 @@ html, body {
   width: 100%;
   font-weight: bold;
   text-align: center;
+  color: #efefee;
 }
-.theme-simple h2 {
+.theme-green h2 {
   font-size: 72px;
   font-size: 3.6vw;
-  border-bottom: 2px solid #cccccc;
   margin-bottom: 0.5em;
   font-weight: bold;
   padding-bottom: 0.5em;
+  color: #efefee;
 }
-.theme-simple h3 {
+.theme-green h3 {
   font-size: 48px;
   font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.theme-simple p, .theme-simple ul, .theme-simple ol, .theme-simple li {
+.theme-green p, .theme-green ul, .theme-green ol, .theme-green li {
   margin-bottom: 0.5em;
 }
-.theme-simple ul, .theme-simple ol {
+.theme-green ul, .theme-green ol {
   margin-left: 1em;
   padding-left: 1.5em;
 }
-.theme-simple ul {
+.theme-green ul {
   list-style: disc;
 }
-.theme-simple ol {
+.theme-green ol {
   list-style: decimal;
 }
-.theme-simple pre {
+.theme-green pre {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
-  background-color: #cccccc;
 }
-.theme-simple blockquote {
-  border-left: 5px solid #cccccc;
+.theme-green blockquote {
+  border-left: 10px solid #efefee;
   margin-left: 1em;
   padding-left: 1em;
 }
-.theme-simple img {
+.theme-green img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-.theme-simple em {
+.theme-green em {
   font-weight: bold;
 }
-.theme-simple b, .theme-simple strong {
+.theme-green b, .theme-green strong {
   font-weight: bold;
-  color: #20c88b;
 }
-.theme-simple a {
-  color: #434343;
+.theme-green a {
+  color: #27360f;
+  text-decoration: wavy;
 }

@@ -4,14 +4,12 @@
 @import "../base/utilities";
 @import "../base/slide";
 
-$bgColor: #EEEEEE;
-$textColor: #434343;
-$textSubColor: #CCCCCC;
-$accentColor: #20C88B;
+$bgColor: #3E4360;
+$textColor: #F7EACB;
+$accentColor: #F7D33A;
 
-
-// Simple
-.theme-simple {
+// Night
+.theme-night {
   @include font-size(3.2,48);
   .gs-slide-content {
     position: relative;
@@ -33,7 +31,6 @@ $accentColor: #20C88B;
   }
   h2 {
     @include font-size(3.6,72);
-    border-bottom: 2px solid $textSubColor;
     margin-bottom: 0.5em;
     font-weight: bold;
     padding-bottom: 0.5em;
@@ -59,10 +56,9 @@ $accentColor: #20C88B;
   pre {
     @include font-size(2.0,32);
     padding: 1em;
-    background-color: $textSubColor;
   }
   blockquote {
-    border-left: 5px solid $textSubColor;
+    border-left: 10px solid $accentColor;
     margin-left: 1em;
     padding-left: 1em;
   }
@@ -81,5 +77,6 @@ $accentColor: #20C88B;
   }
   a {
     color: $textColor;
+    text-decoration: wavy;
   }
 }
