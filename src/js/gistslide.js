@@ -147,22 +147,6 @@
 		};
 	}
 
-	function initializeGist() {
-		//hide left panel
-		qs(".root-pane").style.display = "none";
-
-		//fix main content
-		var column = qs(".column");
-		column.style.float = "none";
-		column.style.width = "100%";
-
-		//hide other content
-		qs(".js-comment-form").style.display = "none";
-		qs("#header").style.display = "none";
-		qs(".pagehead").style.display = "none";
-		qs("#footer").style.display = "none";
-	}
-
 	(function() {
 		//if here is not gist@github
 		if(win.location.hostname != 'gist.github.com') {
@@ -190,7 +174,10 @@
 		//move article.markdown-body to body
 		moveNode(qs(".markdown-body"), document.body);
 
-		//initializeGist();
+		//hide elements
+		qs("#wrapper").style.display = "none";
+		qs("#ajax-error-message").style.display = "none";
+		qs("footer").style.display = "none";
 
 		//cache header positions
 		var header1 = slice.call(qsa('h1'));
