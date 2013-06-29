@@ -4,11 +4,10 @@
 @import "../base/utilities";
 @import "../base/slide";
 
-$bgColor: #EEEEEE;
-$textColor: #434343;
-$textSubColor: #CCCCCC;
-$accentColor: #20C88B;
-
+$bgColor: #FFFFFF;
+$textColor: #000000;
+$textSubColor: #777777;
+$accentColor: #4183c4;
 
 // Simple
 .gs-theme {
@@ -33,7 +32,7 @@ $accentColor: #20C88B;
   }
   h2 {
     @include font-size(3.6,72);
-    border-bottom: 2px solid $textSubColor;
+    border-bottom: 3px solid #eee;
     margin-bottom: 0.5em;
     font-weight: bold;
     padding-bottom: 0.5em;
@@ -62,9 +61,10 @@ $accentColor: #20C88B;
     background-color: $textSubColor;
   }
   blockquote {
-    border-left: 5px solid $textSubColor;
+    border-left: 10px solid #DDD;
     margin-left: 1em;
     padding-left: 1em;
+    color: $textSubColor;
   }
   img {
     display: block;
@@ -77,9 +77,8 @@ $accentColor: #20C88B;
   }
   b,strong {
     font-weight: bold;
-    color: $accentColor;
   }
   a {
-    color: $textColor;
+    color: $accentColor;
   }
 }
