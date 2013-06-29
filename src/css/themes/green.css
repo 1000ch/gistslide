@@ -105,7 +105,7 @@ html, body, article, div {
   height: 100%;
 }
 
-.theme-green {
+.gs-theme {
   font-size: 48px;
   font-size: 3.2vw;
   background: #688e2b;
@@ -117,7 +117,7 @@ html, body, article, div {
   background: radial-gradient(ellipse at center, #688e2b 0%, #638c21 44%, #398235 100%);
   background-attachment: fixed;
 }
-.theme-green .gs-slide-content {
+.gs-theme .gs-slide-content {
   position: relative;
   padding: 2em;
   color: #27360f;
@@ -125,8 +125,8 @@ html, body, article, div {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.theme-green h1,
-.theme-green .gist-description {
+.gs-theme h1,
+.gs-theme .gist-description {
   font-size: 96px;
   font-size: 4.8vw;
   position: absolute;
@@ -137,7 +137,7 @@ html, body, article, div {
   text-align: center;
   color: #efefee;
 }
-.theme-green h2 {
+.gs-theme h2 {
   font-size: 72px;
   font-size: 3.6vw;
   margin-bottom: 0.5em;
@@ -145,48 +145,48 @@ html, body, article, div {
   padding-bottom: 0.5em;
   color: #efefee;
 }
-.theme-green h3 {
+.gs-theme h3 {
   font-size: 48px;
   font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.theme-green p, .theme-green ul, .theme-green ol, .theme-green li {
+.gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
   margin-bottom: 0.5em;
 }
-.theme-green ul, .theme-green ol {
+.gs-theme ul, .gs-theme ol {
   margin-left: 1em;
   padding-left: 1.5em;
 }
-.theme-green ul {
+.gs-theme ul {
   list-style: disc;
 }
-.theme-green ol {
+.gs-theme ol {
   list-style: decimal;
 }
-.theme-green pre {
+.gs-theme pre {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
 }
-.theme-green blockquote {
+.gs-theme blockquote {
   border-left: 10px solid #efefee;
   margin-left: 1em;
   padding-left: 1em;
 }
-.theme-green img {
+.gs-theme img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-.theme-green em {
+.gs-theme em {
   font-weight: bold;
 }
-.theme-green b, .theme-green strong {
+.gs-theme b, .gs-theme strong {
   font-weight: bold;
 }
-.theme-green a {
+.gs-theme a {
   color: #27360f;
   text-decoration: wavy;
 }
