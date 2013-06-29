@@ -105,18 +105,18 @@
 
 	/**
 	 * slide container
-	 * @param headerElements
+	 * @param elementList
 	 * @constructor
 	 */
-	function SlideContainer(headerElements) {
-		this.headerElements = headerElements;
-		this.headerElements.sort(function(x, y) {
-			return parseInt(x.offsetTop, 10) > parseInt(y.offsetTop);
+	function SlideContainer(elementList) {
+		this.elementList = elementList;
+		this.elementList.sort(function(x, y) {
+			return parseInt(x.offsetTop, 10) > parseInt(y.offsetTop, 10);
 		});
-		this.headerOffsets = map.call(this.headerElements, function(htmlElement) {
-			return htmlElement.offsetTop;
+		this.offsetList = map.call(this.elementList, function(element) {
+			return element.offsetTop;
 		});
-		this.limitIndex = this.headerElements.length;
+		this.limitIndex = this.elementList.length;
 		this.currentIndex = 0;
 		/**
 		 * slide to index
@@ -126,9 +126,9 @@
 			if(index < 0) {
 				window.scrollTo(0, 0);
 			} else if(this.limitIndex < index) {
-				window.scrollTo(0, this.headerOffsets[this.limitIndex]);
+				window.scrollTo(0, this.offsetList[this.limitIndex]);
 			} else {
-				window.scrollTo(0, this.headerOffsets[index]);
+				window.scrollTo(0, this.offsetList[index]);
 			}
 		};
 		/**
@@ -160,6 +160,9 @@
 		}
 		//get hash string
 		var cssFile = win.location.hash.replace('#', '');
+		if(!cssFile) {
+			cssFile = "default";
+		}
 
 		//create link node
 		var linkNode = createNode('link', {
@@ -208,8 +211,7 @@
 			});
 		});
 
-		//var container = new SlideContainer();
-
+		var container = new SlideContainer(qsa(".gs-slide-content"));
 
 		//listen keydown event
 		doc.addEventListener('keydown', function(e) {
