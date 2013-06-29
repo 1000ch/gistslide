@@ -192,7 +192,7 @@
 		var slideContainers = qsa(".gs-slide-content");
 		forEach.call(slideContainers, function(slideContainer) {
 			var element = slideContainer.nextSibling;
-			while(element.classList.contains("gs-slide-content")) {
+			while(element && element.classList.contains("gs-slide-content")) {
 				moveNode(element, slideContainer);
 				element = element.nextSibling;
 			}
