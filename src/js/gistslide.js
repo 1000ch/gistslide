@@ -191,6 +191,10 @@
 		});
 		var slideContainers = qsa(".gs-slide-content");
 		forEach.call(slideContainers, function(slideContainer) {
+			console.log("slideContainer");
+			console.log(slideContainer);
+			console.log("slideContainer.nextSibling");
+			console.log(slideContainer.nextSibling);
 			var element = slideContainer.nextSibling;
 			while(element && element.nodeType === 1 && !element.classList.contains("gs-slide-content")) {
 				console.log(element);
