@@ -182,12 +182,24 @@
 		//cache header positions
 		var header1 = slice.call(qsa('h1'));
 		var header2 = slice.call(qsa('h2'));
-		var container = new SlideContainer(header1.concat(header2));
-		container.headerElements.forEach(function(element) {
-			wrapNode(element, createNode("section", {
+		var headers = header1.concat(header2);
+		forEach.call(headers, function(header) {
+			//wrap header with section.gs-slide-content
+			wrapNode(header, createNode("section", {
 				class: "gs-slide-content"
 			}));
 		});
+		var slideContainers = qsa(".gs-slide-content");
+		forEach.call(slideContainers, function(slideContainer) {
+			var element = slideContainer.nextSibling;
+			while(element.classList.contains("gs-slide-content")) {
+				moveNode(element, slideContainer);
+				element = element.nextSibling;
+			}
+		});
+
+		//var container = new SlideContainer();
+
 
 		//listen keydown event
 		doc.addEventListener('keydown', function(e) {
