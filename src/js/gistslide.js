@@ -61,6 +61,8 @@
 
 	/**
 	 * move node
+	 * @param {HTMLElement} targetNode
+	 * @param {HTMLElement} destNode
 	 */
 	function moveNode(targetNode, destNode) {
 		//append clone of targetNode to destNode
@@ -69,6 +71,11 @@
 		targetNode.parentNode.removeChild(targetNode);
 	}
 
+	/**
+	 * get sibling
+	 * @param {HTMLElement} targetNode
+	 * @returns {HTMLElement}
+	 */
 	function getSibling(targetNode) {
 		var node = targetNode;
 		while ( (node = node.nextSibling) && node.nodeType !== 1 ) {}
