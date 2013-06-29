@@ -3,6 +3,7 @@
 	//cache external variable
 	var win = window;
 	var doc = win.document;
+	var forEach = [].forEach;
 	var slice = [].slice;
 	var map = [].map;
 
@@ -51,10 +52,49 @@
 	 * @param {HTMLElement} wrapNode
 	 */
 	function wrapNode(targetNode, wrapNode) {
+		//append clone of targetNode to wrapNode
 		wrapNode.appendChild(targetNode.cloneNode(true));
 		var parentNode = targetNode.parentNode;
 		parentNode.insertBefore(wrapNode, targetNode);
 		parentNode.removeChild(targetNode);
+	}
+
+	/**
+	 * move node
+	 */
+	function moveNode(targetNode, destNode) {
+		//append clone of targetNode to destNode
+		destNode.appendChild(targetNode.cloneNode(true));
+		//remove itself
+		targetNode.parentNode.removeChild(targetNode);
+	}
+
+	/**
+	 * add class to node
+	 * @param {HTMLElement} targetNode
+	 * @param {string} className
+	 */
+	function addClass(targetNode, className) {
+		if(targetNode) {
+			var classArray = className.split(" ");
+			forEach.call(classArray, function(name) {
+				targetNode.classList.add(name);
+			});
+		}
+	}
+
+	/**
+	 * remove class from node
+	 * @param {HTMLElement} targetNode
+	 * @param {string} className
+	 */
+	function removeClass(targetNode, className) {
+		if(targetNode) {
+			var classArray = className.split(" ");
+			forEach.call(classArray, function(name) {
+				targetNode.classList.remove(name);
+			});
+		}
 	}
 
 	/**
@@ -141,6 +181,15 @@
 		//insert nodes into head tail
 		qs('head').appendChild(linkNode);
 
+		//add .gs-theme to body
+		addClass(document.body, "gs-theme");
+
+		//add .gs-slide to article.markdown-body
+		addClass(qs(".markdown-body"), "gs-slide");
+
+		//move article.markdown-body to body
+		moveNode(qs(".markdown-body"), document.body);
+
 		initializeGist();
 
 		//cache header positions
@@ -148,8 +197,8 @@
 		var header2 = slice.call(qsa('h2'));
 		var container = new SlideContainer(header1.concat(header2));
 		container.headerElements.forEach(function(element) {
-			wrapNode(element, createNode("div", {
-				class: "sampleClass"
+			wrapNode(element, createNode("section", {
+				class: "gs-slide-content"
 			}));
 		});
 
