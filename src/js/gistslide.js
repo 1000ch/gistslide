@@ -69,6 +69,12 @@
 		targetNode.parentNode.removeChild(targetNode);
 	}
 
+	function getSibling(targetNode) {
+		var node = targetNode;
+		while ( (node = node.nextSibling) && node.nodeType !== 1 ) {}
+		return node;
+	}
+
 	/**
 	 * add class to node
 	 * @param {HTMLElement} targetNode
@@ -195,11 +201,11 @@
 			console.log(slideContainer);
 			console.log("slideContainer.nextSibling");
 			console.log(slideContainer.nextSibling);
-			var element = slideContainer.nextSibling;
-			while(element && element.nodeType === 1 && !element.classList.contains("gs-slide-content")) {
+			var element = getSibling(slideContainer);
+			while(element && !element.classList.contains("gs-slide-content")) {
 				console.log(element);
 				moveNode(element, slideContainer);
-				element = element.nextSibling;
+				element = getSibling(element);
 			}
 		});
 
