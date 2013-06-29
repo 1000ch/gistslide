@@ -109,7 +109,7 @@
 	 * @constructor
 	 */
 	function SlideContainer(elementList) {
-		this.elementList = elementList;
+		this.elementList = slice.call(elementList);
 		this.elementList.sort(function(x, y) {
 			return parseInt(x.offsetTop, 10) > parseInt(y.offsetTop, 10);
 		});
