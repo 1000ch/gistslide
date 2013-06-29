@@ -4,14 +4,14 @@
 @import "../base/utilities";
 @import "../base/slide";
 
+// Skin
 $bgColor: #EEEEEE;
 $textColor: #434343;
 $textSubColor: #CCCCCC;
 $accentColor: #20C88B;
 
-
 // Simple
-.theme-simple {
+.gs-theme {
   @include font-size(3.2,48);
   .gs-slide-content {
     position: relative;

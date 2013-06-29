@@ -105,11 +105,11 @@ html, body, article, div {
   height: 100%;
 }
 
-.theme-night {
+.gs-theme {
   font-size: 48px;
   font-size: 3.2vw;
 }
-.theme-night .gs-slide-content {
+.gs-theme .gs-slide-content {
   position: relative;
   padding: 2em;
   background-color: #3e4360;
@@ -119,8 +119,8 @@ html, body, article, div {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.theme-night h1,
-.theme-night .gist-description {
+.gs-theme h1,
+.gs-theme .gist-description {
   font-size: 96px;
   font-size: 4.8vw;
   position: absolute;
@@ -130,56 +130,56 @@ html, body, article, div {
   font-weight: bold;
   text-align: center;
 }
-.theme-night h2 {
+.gs-theme h2 {
   font-size: 72px;
   font-size: 3.6vw;
   margin-bottom: 0.5em;
   font-weight: bold;
   padding-bottom: 0.5em;
 }
-.theme-night h3 {
+.gs-theme h3 {
   font-size: 48px;
   font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.theme-night p, .theme-night ul, .theme-night ol, .theme-night li {
+.gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
   margin-bottom: 0.5em;
 }
-.theme-night ul, .theme-night ol {
+.gs-theme ul, .gs-theme ol {
   margin-left: 1em;
   padding-left: 1.5em;
 }
-.theme-night ul {
+.gs-theme ul {
   list-style: disc;
 }
-.theme-night ol {
+.gs-theme ol {
   list-style: decimal;
 }
-.theme-night pre {
+.gs-theme pre {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
 }
-.theme-night blockquote {
+.gs-theme blockquote {
   border-left: 10px solid #f7d33a;
   margin-left: 1em;
   padding-left: 1em;
 }
-.theme-night img {
+.gs-theme img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-.theme-night em {
+.gs-theme em {
   font-weight: bold;
 }
-.theme-night b, .theme-night strong {
+.gs-theme b, .gs-theme strong {
   font-weight: bold;
   color: #f7d33a;
 }
-.theme-night a {
+.gs-theme a {
   color: #f7eacb;
   text-decoration: wavy;
 }

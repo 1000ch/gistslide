@@ -105,11 +105,11 @@ html, body, article, div {
   height: 100%;
 }
 
-.theme-simple {
+.gs-theme {
   font-size: 48px;
   font-size: 3.2vw;
 }
-.theme-simple .gs-slide-content {
+.gs-theme .gs-slide-content {
   position: relative;
   padding: 2em;
   background-color: #eeeeee;
@@ -119,8 +119,8 @@ html, body, article, div {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.theme-simple h1,
-.theme-simple .gist-description {
+.gs-theme h1,
+.gs-theme .gist-description {
   font-size: 96px;
   font-size: 4.8vw;
   position: absolute;
@@ -130,7 +130,7 @@ html, body, article, div {
   font-weight: bold;
   text-align: center;
 }
-.theme-simple h2 {
+.gs-theme h2 {
   font-size: 72px;
   font-size: 3.6vw;
   border-bottom: 2px solid #cccccc;
@@ -138,49 +138,49 @@ html, body, article, div {
   font-weight: bold;
   padding-bottom: 0.5em;
 }
-.theme-simple h3 {
+.gs-theme h3 {
   font-size: 48px;
   font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.theme-simple p, .theme-simple ul, .theme-simple ol, .theme-simple li {
+.gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
   margin-bottom: 0.5em;
 }
-.theme-simple ul, .theme-simple ol {
+.gs-theme ul, .gs-theme ol {
   margin-left: 1em;
   padding-left: 1.5em;
 }
-.theme-simple ul {
+.gs-theme ul {
   list-style: disc;
 }
-.theme-simple ol {
+.gs-theme ol {
   list-style: decimal;
 }
-.theme-simple pre {
+.gs-theme pre {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
   background-color: #cccccc;
 }
-.theme-simple blockquote {
+.gs-theme blockquote {
   border-left: 5px solid #cccccc;
   margin-left: 1em;
   padding-left: 1em;
 }
-.theme-simple img {
+.gs-theme img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-.theme-simple em {
+.gs-theme em {
   font-weight: bold;
 }
-.theme-simple b, .theme-simple strong {
+.gs-theme b, .gs-theme strong {
   font-weight: bold;
   color: #20c88b;
 }
-.theme-simple a {
+.gs-theme a {
   color: #434343;
 }

@@ -4,12 +4,13 @@
 @import "../base/utilities";
 @import "../base/slide";
 
+// Skin
 $bgColor: #3E4360;
 $textColor: #F7EACB;
 $accentColor: #F7D33A;
 
 // Night
-.theme-night {
+.gs-theme {
   @include font-size(3.2,48);
   .gs-slide-content {
     position: relative;

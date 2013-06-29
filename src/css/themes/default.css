@@ -108,19 +108,13 @@ html, body, article, div {
 .gs-theme {
   font-size: 48px;
   font-size: 3.2vw;
-  background: #688e2b;
-  background: -moz-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #688e2b), color-stop(44%, #638c21), color-stop(100%, #398235));
-  background: -webkit-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
-  background: -o-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
-  background: radial-gradient(ellipse at center, #688e2b 0%, #638c21 44%, #398235 100%);
-  background-attachment: fixed;
 }
 .gs-theme .gs-slide-content {
   position: relative;
   padding: 2em;
-  color: #27360f;
+  background-color: white;
+  line-height: 1.6;
+  color: black;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -132,18 +126,18 @@ html, body, article, div {
   position: absolute;
   top: 40%;
   left: 0;
+  border-bottom: 5px solid #ddd;
   width: 100%;
   font-weight: bold;
   text-align: center;
-  color: #efefee;
 }
 .gs-theme h2 {
   font-size: 72px;
   font-size: 3.6vw;
+  border-bottom: 3px solid #eee;
   margin-bottom: 0.5em;
   font-weight: bold;
   padding-bottom: 0.5em;
-  color: #efefee;
 }
 .gs-theme h3 {
   font-size: 48px;
@@ -168,11 +162,13 @@ html, body, article, div {
   font-size: 32px;
   font-size: 2vw;
   padding: 1em;
+  background-color: #777777;
 }
 .gs-theme blockquote {
-  border-left: 10px solid #efefee;
+  border-left: 10px solid #DDD;
   margin-left: 1em;
   padding-left: 1em;
+  color: #777777;
 }
 .gs-theme img {
   display: block;
@@ -187,6 +183,5 @@ html, body, article, div {
   font-weight: bold;
 }
 .gs-theme a {
-  color: #27360f;
-  text-decoration: wavy;
+  color: #4183c4;
 }
