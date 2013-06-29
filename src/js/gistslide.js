@@ -203,7 +203,9 @@
 				moveNodeList.push(element);
 				element = getSibling(element);
 			}
-			console.log(moveNodeList);
+			forEach.call(moveNodeList, function(node) {
+				moveNode(node, slideContainer);
+			});
 		});
 
 		//var container = new SlideContainer();
