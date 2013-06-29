@@ -187,8 +187,11 @@
 		//add .gs-slide to article.markdown-body
 		addClass(qs(".markdown-body"), "gs-slide");
 
+		//remove classes
+		removeClass(qs(".gs-slide"), "markdown-body js-file js-task-list-container is-task-list-enabled");
+
 		//move article.markdown-body to body
-		moveNode(qs(".markdown-body"), document.body);
+		moveNode(qs(".gs-slide"), document.body);
 
 		//hide elements
 		qs("#wrapper").style.display = "none";
