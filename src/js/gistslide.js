@@ -175,7 +175,7 @@
 		var linkNode = createNode('link', {
 			rel: 'stylesheet',
 			type: 'text/css',
-			href: 'https://raw.github.com/1000ch/gistslide/master/src/css/themes/' + cssFile + '.css'
+			href: 'http://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
 		});
 
 		//insert nodes into head tail
