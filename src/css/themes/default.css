@@ -102,6 +102,13 @@ table {
   hyphens: auto;
 }
 
+/*
+# Hidden
+*/
+.is-hidden {
+  display: none;
+}
+
 html, body, article, div {
   height: 100% !important;
 }

@@ -42,3 +42,10 @@
 .wrap {
   @include wrap;
 }
+
+/*
+# Hidden
+*/
+.is-hidden {
+  display: none;
+}
