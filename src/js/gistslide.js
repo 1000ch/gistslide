@@ -198,9 +198,9 @@
 		moveNode(qs(".gs-slide"), document.body);
 
 		//hide elements
-		qs("#wrapper").style.display = "none";
-		qs("#ajax-error-message").style.display = "none";
-		qs("footer").style.display = "none";
+		addClass(qs("#wrapper"), "is-hidden");
+		addClass(qs("#ajax-error-message"), "is-hidden");
+		addClass(qs("footer"), "is-hidden");
 
 		//get headers under .gs-slide
 		var slideParent = qs(".gs-slide");
