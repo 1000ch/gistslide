@@ -187,80 +187,46 @@ html, body, article, div {
   font-weight: bold;
 }
 
-.gs-theme {
-  font-size: 48px;
-  font-size: 3.2vw;
-}
 .gs-theme .gs-slide-content {
-  position: relative;
-  padding: 2em;
   background-color: #eeeeee;
-  line-height: 1.6;
   color: #434343;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
-.gs-theme h1,
-.gs-theme .gist-description {
-  font-size: 96px;
-  font-size: 4.8vw;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  font-weight: bold;
+.gs-theme h1 {
   text-align: center;
+  font-weight: bold;
 }
 .gs-theme h2 {
-  font-size: 72px;
-  font-size: 3.6vw;
   border-bottom: 2px solid #cccccc;
-  margin-bottom: 0.5em;
-  font-weight: bold;
   padding-bottom: 0.5em;
+  font-weight: bold;
 }
 .gs-theme h3 {
-  font-size: 48px;
-  font-size: 3.2vw;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
-.gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
-  margin-bottom: 0.5em;
-}
-.gs-theme ul, .gs-theme ol {
-  margin-left: 1em;
-  padding-left: 1.5em;
-}
-.gs-theme ul {
-  list-style: disc;
-}
-.gs-theme ol {
-  list-style: decimal;
-}
 .gs-theme pre {
-  font-size: 32px;
-  font-size: 2vw;
-  padding: 1em;
-  background-color: #cccccc;
+  overflow: auto;
+  border-radius: 0.2em;
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  background-color: #f8f8f8;
+}
+.gs-theme code {
+  border-radius: 0.2em;
+  border: 1px solid #ddd;
+  margin: 0 2px;
+  padding: 0px 5px;
+  background-color: #f8f8f8;
 }
 .gs-theme blockquote {
   border-left: 5px solid #cccccc;
   margin-left: 1em;
   padding-left: 1em;
 }
-.gs-theme img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
 .gs-theme em {
   font-weight: bold;
 }
 .gs-theme b, .gs-theme strong {
-  font-weight: bold;
   color: #20c88b;
 }
 .gs-theme a {

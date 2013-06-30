@@ -12,71 +12,46 @@ $accentColor: #20C88B;
 
 // Simple
 .gs-theme {
-  @include font-size(3.2,48);
   .gs-slide-content {
-    position: relative;
-    padding: 2em;
     background-color: $bgColor;
-    line-height: 1.6;
     color: $textColor;
-    @include box-sizing;
   }
-  h1,
-  .gist-description {
-    @include font-size(4.8,96);
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    font-weight: bold;
+  h1 {
     text-align: center;
+    font-weight: bold;
   }
   h2 {
-    @include font-size(3.6,72);
     border-bottom: 2px solid $textSubColor;
-    margin-bottom: 0.5em;
-    font-weight: bold;
     padding-bottom: 0.5em;
+    font-weight: bold;
   }
   h3 {
-    @include font-size(3.2,48);
     margin-bottom: 0.5em;
     font-weight: bold;
   }
-  p,ul,ol,li {
-    margin-bottom: 0.5em;
-  }
-  ul,ol {
-    margin-left: 1em;
-    padding-left: 1.5em;
-  }
-  ul {
-    list-style: disc;
-  }
-  ol {
-    list-style: decimal;
-  }
   pre {
-    @include font-size(2.0,32);
-    padding: 1em;
-    background-color: $textSubColor;
+    overflow: auto;
+    border-radius: 0.2em;
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+    background-color: #f8f8f8;
+  }
+  code {
+    border-radius: 0.2em;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    padding: 0px 5px;
+    background-color: #f8f8f8;
   }
   blockquote {
     border-left: 5px solid $textSubColor;
     margin-left: 1em;
     padding-left: 1em;
   }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-  }
   em {
     font-weight: bold;
   }
   b,strong {
-    font-weight: bold;
     color: $accentColor;
   }
   a {
