@@ -126,10 +126,6 @@
 		this.offsetList = map.call(this.elementList, function(element) {
 			return element.offsetTop;
 		});
-		console.log("elementList");
-		console.log(this.elementList);
-		console.log("offsetList");
-		console.log(this.offsetList);
 		this.limitIndex = this.elementList.length;
 		this.currentIndex = 0;
 		/**
@@ -233,6 +229,10 @@
 		});
 
 		var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
+		console.log("elementList");
+		console.log(container.elementList);
+		console.log("offsetList");
+		console.log(container.offsetList);
 
 		//listen keydown event
 		doc.addEventListener('keydown', function(e) {
