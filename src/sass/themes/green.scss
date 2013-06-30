@@ -11,7 +11,6 @@ $accentColor: #EFEFEE;
 
 // Green
 .gs-theme{
-  @include font-size(3.2,48);
   background: $bgColor;
   background: -moz-radial-gradient(center, ellipse cover,  rgba(104,142,43,1) 0%, rgba(99,140,33,1) 44%, rgba(57,130,53,1) 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(104,142,43,1)), color-stop(44%,rgba(99,140,33,1)), color-stop(100%,rgba(57,130,53,1)));
@@ -21,66 +20,39 @@ $accentColor: #EFEFEE;
   background: radial-gradient(ellipse at center,  rgba(104,142,43,1) 0%,rgba(99,140,33,1) 44%,rgba(57,130,53,1) 100%);
   background-attachment: fixed;
   .gs-slide-content {
-    position: relative;
-    padding: 2em;
     color: $textColor;
-    @include box-sizing;
   }
-  h1,
-  .gist-description {
-    @include font-size(4.8,96);
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    font-weight: bold;
+  h1 {
     text-align: center;
+    font-weight: bold;
     color: $accentColor;
   }
   h2 {
-    @include font-size(3.6,72);
     margin-bottom: 0.5em;
     font-weight: bold;
-    padding-bottom: 0.5em;
     color: $accentColor;
   }
   h3 {
-    @include font-size(3.2,48);
-    margin-bottom: 0.5em;
     font-weight: bold;
   }
-  p,ul,ol,li {
-    margin-bottom: 0.5em;
-  }
-  ul,ol {
-    margin-left: 1em;
-    padding-left: 1.5em;
-  }
-  ul {
-    list-style: disc;
-  }
-  ol {
-    list-style: decimal;
-  }
   pre {
-    @include font-size(2.0,32);
-    padding: 1em;
+    overflow: auto;
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    background-color: rgba(#FFFFFF,0.75);
+  }
+  code {
+    border-radius: 0.2em;
+    margin: 0 .5em;
+    padding: .2em .5em;
+    background-color: rgba(#FFFFFF,0.75);
   }
   blockquote {
     border-left: 10px solid $accentColor;
     margin-left: 1em;
     padding-left: 1em;
   }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-  }
   em {
-    font-weight: bold;
-  }
-  b,strong {
     font-weight: bold;
   }
   a {

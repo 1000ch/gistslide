@@ -188,8 +188,6 @@ html, body, article, div {
 }
 
 .gs-theme {
-  font-size: 48px;
-  font-size: 3.2vw;
   background: #688e2b;
   background: -moz-radial-gradient(center, ellipse cover, #688e2b 0%, #638c21 44%, #398235 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #688e2b), color-stop(44%, #638c21), color-stop(100%, #398235));
@@ -200,72 +198,39 @@ html, body, article, div {
   background-attachment: fixed;
 }
 .gs-theme .gs-slide-content {
-  position: relative;
-  padding: 2em;
   color: #27360f;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
-.gs-theme h1,
-.gs-theme .gist-description {
-  font-size: 96px;
-  font-size: 4.8vw;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  font-weight: bold;
+.gs-theme h1 {
   text-align: center;
+  font-weight: bold;
   color: #efefee;
 }
 .gs-theme h2 {
-  font-size: 72px;
-  font-size: 3.6vw;
   margin-bottom: 0.5em;
   font-weight: bold;
-  padding-bottom: 0.5em;
   color: #efefee;
 }
 .gs-theme h3 {
-  font-size: 48px;
-  font-size: 3.2vw;
-  margin-bottom: 0.5em;
   font-weight: bold;
 }
-.gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
-  margin-bottom: 0.5em;
-}
-.gs-theme ul, .gs-theme ol {
-  margin-left: 1em;
-  padding-left: 1.5em;
-}
-.gs-theme ul {
-  list-style: disc;
-}
-.gs-theme ol {
-  list-style: decimal;
-}
 .gs-theme pre {
-  font-size: 32px;
-  font-size: 2vw;
-  padding: 1em;
+  overflow: auto;
+  border-radius: 0.2em;
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.gs-theme code {
+  border-radius: 0.2em;
+  margin: 0 .5em;
+  padding: .2em .5em;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .gs-theme blockquote {
   border-left: 10px solid #efefee;
   margin-left: 1em;
   padding-left: 1em;
 }
-.gs-theme img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
 .gs-theme em {
-  font-weight: bold;
-}
-.gs-theme b, .gs-theme strong {
   font-weight: bold;
 }
 .gs-theme a {
