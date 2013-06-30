@@ -184,10 +184,6 @@
 			href: 'https://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
 		});
 
-		window.addEventListener("load", function(e) {
-			console.log("window is loaded.");
-		});
-
 		//insert nodes into head tail
 		qs('head').appendChild(linkNode);
 
@@ -235,20 +231,23 @@
 			});
 		});
 
-		var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
-		console.log("elementList");
-		console.log(container.elementList);
-		console.log("offsetList");
-		console.log(container.offsetList);
+		window.setTimeout(function() {
+			//after repaint
+			var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
+			console.log("elementList");
+			console.log(container.elementList);
+			console.log("offsetList");
+			console.log(container.offsetList);
 
-		//listen keydown event
-		doc.addEventListener('keydown', function(e) {
-			if(e.keyCode == KEYCODE_LEFT) {
-				container.prev();
-			} else if(e.keyCode == KEYCODE_RIGHT) {
-				container.next();
-			}
-		});
+			//listen keydown event
+			doc.addEventListener('keydown', function(e) {
+				if(e.keyCode == KEYCODE_LEFT) {
+					container.prev();
+				} else if(e.keyCode == KEYCODE_RIGHT) {
+					container.next();
+				}
+			});
+		}, 1500);
 	})();
 
 })();
