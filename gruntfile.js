@@ -3,8 +3,15 @@ module.exports = function(grunt) {
 		jshint: {
 			all: ["src/js/gistslide.js"]
 		},
+		uglify: {
+			all: {
+				files: {
+					"src/js/gistslide.min.js": ["src/js/gistslide.js"]
+				}
+			}
+		},
 		csslint: {
-			all: ["src/css/gistslide.css"]
+			all: ["src/css/themes/*.css"]
 		},
 		sass: {
 			options: {
@@ -22,7 +29,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: ["src/js/gistslide.js"],
-				tasks: ["jshint"]
+				tasks: ["jshint", "uglify"]
 			},
 			css: {
 				files: ["src/sass/**/*.scss"],
@@ -32,6 +39,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
