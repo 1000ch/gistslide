@@ -1,8 +1,8 @@
-# gistslide
+# GistSlide
 
 ## About
 
-Inspired from https://github.com/nzoschke/gistdeck.
+Inspired by https://github.com/nzoschke/gistdeck.
 
 ## Usage
 
@@ -23,5 +23,6 @@ Please report [issues](https://github.com/1000ch/gistslide/issues).
 
 ## Lisence
 
-Copyright 1000ch  
-Lisenced under the GPL Lisence version 3.  
+Contribution resources are correspond to contributors.  
+Copyright 1000ch
+Lisenced under the GPL Lisence version 3.
