@@ -35,3 +35,10 @@
     clear: both;
   }
 }
+
+/*
+# Wrap text
+*/
+.wrap {
+  @include wrap;
+}
