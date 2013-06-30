@@ -57,6 +57,7 @@
 	function wrapNode(targetNode, destNode) {
 		//append clone of targetNode to wrapNode
 		destNode.appendChild(targetNode.cloneNode(true));
+		//append cloned node and remove before node
 		var parentNode = targetNode.parentNode;
 		parentNode.insertBefore(destNode, targetNode);
 		parentNode.removeChild(targetNode);
@@ -184,6 +185,10 @@
 			href: 'https://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
 		});
 
+		linkNode.addEventListener("load", function() {
+			console.log("css is loaded.");
+		});
+
 		//insert nodes into head tail
 		qs('head').appendChild(linkNode);
 
@@ -204,20 +209,25 @@
 		qs("#ajax-error-message").style.display = "none";
 		qs("footer").style.display = "none";
 
-		//cache header positions
+		//get headers under .gs-slide
 		var slideParent = qs(".gs-slide");
 		var header1 = slice.call(qsa('h1', slideParent));
 		var header2 = slice.call(qsa('h2', slideParent));
 		var headers = header1.concat(header2);
+		//filter element which has secret class
 		headers = filter.call(headers, function(header) {
 			return !header.classList.contains("secret");
 		});
+
+		//wrap headers with section.gs-slide-content
 		forEach.call(headers, function(header) {
 			//wrap header with section.gs-slide-content
 			wrapNode(header, createNode("section", {
 				class: "gs-slide-content"
 			}));
 		});
+
+		//move following elements to section.gs-slide-content
 		var slideContainers = qsa(".gs-slide-content", qs(".gs-slide"));
 		forEach.call(slideContainers, function(slideContainer) {
 			var moveNodeList = [];
@@ -231,6 +241,7 @@
 			});
 		});
 
+		//wait for reflow completion
 		window.setTimeout(function() {
 			//after repaint
 			var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
