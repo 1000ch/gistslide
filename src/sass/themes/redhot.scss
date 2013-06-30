@@ -1,0 +1,62 @@
+// Import
+@import "../base/elements";
+@import "../base/mixins";
+@import "../base/utilities";
+@import "../base/slide";
+
+// Skin
+$bgColor: #DB4743;
+$textColor: #FDFFFD;
+$accentColor: #F6DB74;
+$borderColor: #71302E;
+
+// Redhot
+.gs-theme {
+  .gs-slide-content {
+    background-color: $bgColor;
+    color: $textColor;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: $accentColor;
+  }
+  h2 {
+    font-weight: bold;
+    color: $accentColor;
+  }
+  h3 {
+    font-weight: bold;
+  }
+  pre {
+    overflow: auto;
+    border-radius: 0.2em;
+    border: 1px solid $borderColor;
+    padding: 0.5em 1em;
+    background-color: $borderColor;
+    color: $textColor;
+  }
+  code {
+    border-radius: 0.2em;
+    border: 1px solid $borderColor;
+    margin: 0 .5em;
+    padding: .2em .5em;
+    background-color: $borderColor;
+    color: $textColor;
+  }
+  blockquote {
+    border-left: 10px solid $borderColor;
+    margin-left: 1em;
+    padding-left: 1em;
+  }
+  em {
+    font-weight: bold;
+  }
+  b,strong {
+    color: $accentColor;
+  }
+  a {
+    color: $textColor;
+    text-decoration: wavy;
+  }
+}

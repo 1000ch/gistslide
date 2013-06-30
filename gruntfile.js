@@ -22,6 +22,7 @@ module.exports = function(grunt) {
 				'src/css/themes/default.css': ['src/sass/themes/default.scss'],
 				'src/css/themes/simple.css': ['src/sass/themes/simple.scss'],
 				'src/css/themes/night.css': ['src/sass/themes/night.scss'],
+				'src/css/themes/redhot.css': ['src/sass/themes/redhot.scss'],
 				'src/css/themes/green.css': ['src/sass/themes/green.scss']
 				}
 			}
