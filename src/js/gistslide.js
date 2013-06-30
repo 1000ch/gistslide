@@ -184,6 +184,10 @@
 			href: 'https://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
 		});
 
+		window.addEventListener("load", function(e) {
+			console.log("window is loaded.");
+		});
+
 		//insert nodes into head tail
 		qs('head').appendChild(linkNode);
 
