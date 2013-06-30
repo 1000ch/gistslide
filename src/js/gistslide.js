@@ -3,13 +3,21 @@
 	//cache external variable
 	var win = window;
 	var doc = win.document;
+
+	//native alias
 	var forEach = [].forEach;
 	var slice = [].slice;
 	var map = [].map;
 	var filter = [].filter;
 
+	//constant
+	var KEYCODE_LEFT = 37;
+	var KEYCODE_UP = 38;
+	var KEYCODE_RIGHT = 39;
+	var KEYCODE_BOTTOM = 40;
+
 	/**
-	 * alias for document.querySelector
+	 * document.querySelector alias
 	 * @param {string} selector
 	 * @param {HTMLElement} context
 	 * @returns {Node}
@@ -19,7 +27,7 @@
 	};
 
 	/**
-	 * alias for document.querySelectorAll
+	 * document.querySelectorAll alias
 	 * @param {string} selector
 	 * @param {HTMLElement} context
 	 * @returns {NodeList}
@@ -27,12 +35,6 @@
 	var qsa = function(selector, context) {
 		return (context || doc).querySelectorAll(selector);
 	};
-
-	//constant
-	var KEYCODE_LEFT = 37;
-	var KEYCODE_UP = 38;
-	var KEYCODE_RIGHT = 39;
-	var KEYCODE_BOTTOM = 40;
 
 	/**
 	 * create node
@@ -72,7 +74,17 @@
 		//append clone of targetNode to destNode
 		destNode.appendChild(targetNode.cloneNode(true));
 		//remove itself
-		targetNode.parentNode.removeChild(targetNode);
+		removeNode(targetNode);
+	}
+
+	/**
+	 * remove node
+	 * @param {HTMLElement} targetNode
+	 */
+	function removeNode(targetNode) {
+		if(targetNode && targetNode.parentNode) {
+			targetNode.parentNode.removeveChild(targetNode);
+		}
 	}
 
 	/**
@@ -172,25 +184,6 @@
 		if(win.location.hostname != 'gist.github.com') {
 			return;
 		}
-		//get hash string
-		var cssFile = win.location.hash.replace('#', '');
-		if(!cssFile) {
-			cssFile = "default";
-		}
-
-		//create link node
-		var linkNode = createNode('link', {
-			rel: 'stylesheet',
-			type: 'text/css',
-			href: 'https://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
-		});
-
-		linkNode.addEventListener("load", function() {
-			console.log("css is loaded.");
-		});
-
-		//insert nodes into head tail
-		qs('head').appendChild(linkNode);
 
 		//add .gs-theme to body
 		addClass(document.body, "gs-theme");
@@ -241,19 +234,37 @@
 			});
 		});
 
-		//wait for reflow completion
-		window.setTimeout(function() {
-			//after repaint
-			var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
+		//get hash string
+		var cssFile = win.location.hash.replace('#', '');
+		if(!cssFile) {
+			cssFile = "default";
+		}
 
-			//listen keydown event
-			doc.addEventListener('keydown', function(e) {
-				if(e.keyCode == KEYCODE_LEFT) {
-					container.prev();
-				} else if(e.keyCode == KEYCODE_RIGHT) {
-					container.next();
-				}
-			});
-		}, 1500);
+		//create link node
+		var linkNode = createNode('link', {
+			rel: 'stylesheet',
+			type: 'text/css',
+			href: 'https://gistslide.herokuapp.com/src/css/themes/' + cssFile + '.css'
+		});
+
+		linkNode.addEventListener("load", function() {
+			//wait for reflow completion
+			window.setTimeout(function() {
+				//after repaint
+				var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
+
+				//listen keydown event
+				doc.addEventListener('keydown', function(e) {
+					if(e.keyCode == KEYCODE_LEFT) {
+						container.prev();
+					} else if(e.keyCode == KEYCODE_RIGHT) {
+						container.next();
+					}
+				});
+			}, 1000);
+		});
+
+		//insert nodes into head tail
+		qs('head').appendChild(linkNode);
 	})();
 })();
