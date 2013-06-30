@@ -6,14 +6,33 @@ Inspired from https://github.com/nzoschke/gistdeck.
 
 ## Usage
 
-+ Drag this link to bookmark bar.
-    + <a href="javascript:(function(){var s=document.createElement('script');s.setAttribute('src','https://raw.github.com/1000ch/gistslide/master/src/js/gistslide.js');document.querySelector('head').appendChild(s);})();">gistslide</a>
-+ Visit gist which you want to present.
++ Visit [here](http://gistslide.herokuapp.com/) and add link as bookmarklet.
++ Go to gist which you want to present.
 + Click bookmarklet.
 
 ## Problem?
 
 Please report [issues](https://github.com/1000ch/gistslide/issues).  
+
+## Theme Contributors
+
+<table>
+	<tr>
+		<th>Theme</th><th>Contributor</th>
+	</tr>
+	<tr>
+		<td>Default</td><td>[@hiloki](https://github.com/hiloki)</td>
+	</tr>
+	<tr>
+		<td>Simple</td><td>[@hiloki](https://github.com/hiloki)</td>
+	</tr>
+	<tr>
+		<td>Night</td><td>[@hiloki](https://github.com/hiloki)</td>
+	</tr>
+	<tr>
+		<td>Green</td><td>[@hiloki](https://github.com/hiloki)</td>
+	</tr>
+</table>
 
 ## Lisence
 
