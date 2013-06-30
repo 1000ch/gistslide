@@ -199,8 +199,8 @@
 		qs("footer").style.display = "none";
 
 		//cache header positions
-		var header1 = slice.call(qsa('h1'));
-		var header2 = slice.call(qsa('h2'));
+		var header1 = slice.call(qsa('gs-slide h1'));
+		var header2 = slice.call(qsa('gs-slide h2'));
 		var headers = header1.concat(header2);
 		forEach.call(headers, function(header) {
 			//wrap header with section.gs-slide-content
