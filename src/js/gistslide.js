@@ -215,7 +215,7 @@
 				class: "gs-slide-content"
 			}));
 		});
-		var slideContainers = qsa(".gs-slide-content");
+		var slideContainers = qsa(".gs-slide-content", qs(".gs-slide"));
 		forEach.call(slideContainers, function(slideContainer) {
 			var moveNodeList = [];
 			var element = getSibling(slideContainer);
@@ -228,7 +228,7 @@
 			});
 		});
 
-		var container = new SlideContainer(qsa(".gs-slide-content"));
+		var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
 
 		//listen keydown event
 		doc.addEventListener('keydown', function(e) {
