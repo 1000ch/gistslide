@@ -6,6 +6,7 @@
 	var forEach = [].forEach;
 	var slice = [].slice;
 	var map = [].map;
+	var filter = [].filter;
 
 	/**
 	 * alias for document.querySelector
@@ -205,6 +206,9 @@
 		var header1 = slice.call(qsa('h1', slideParent));
 		var header2 = slice.call(qsa('h2', slideParent));
 		var headers = header1.concat(header2);
+		filter.call(headers, function(header) {
+			return !header.classList.contains("secret");
+		});
 		forEach.call(headers, function(header) {
 			//wrap header with section.gs-slide-content
 			wrapNode(header, createNode("section", {
