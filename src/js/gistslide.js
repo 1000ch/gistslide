@@ -9,20 +9,22 @@
 
 	/**
 	 * alias for document.querySelector
-	 * @param selector
+	 * @param {string} selector
+	 * @param {HTMLElement} context
 	 * @returns {Node}
 	 */
-	var qs = function(selector) {
-		return doc.querySelector(selector);
+	var qs = function(selector, context) {
+		return (context || doc).querySelector(selector);
 	};
 
 	/**
 	 * alias for document.querySelectorAll
-	 * @param selector
+	 * @param {string} selector
+	 * @param {HTMLElement} context
 	 * @returns {NodeList}
 	 */
-	var qsa = function(selector) {
-		return doc.querySelectorAll(selector);
+	var qsa = function(selector, context) {
+		return (context || doc).querySelectorAll(selector);
 	};
 
 	//constant
@@ -199,8 +201,9 @@
 		qs("footer").style.display = "none";
 
 		//cache header positions
-		var header1 = slice.call(qsa('gs-slide h1'));
-		var header2 = slice.call(qsa('gs-slide h2'));
+		var slideParent = qs(".gs-slide");
+		var header1 = slice.call(qsa('h1', slideParent));
+		var header2 = slice.call(qsa('h2', slideParent));
 		var headers = header1.concat(header2);
 		forEach.call(headers, function(header) {
 			//wrap header with section.gs-slide-content
