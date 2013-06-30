@@ -126,6 +126,9 @@
 		this.offsetList = map.call(this.elementList, function(element) {
 			return element.offsetTop;
 		});
+		this.offsetList.sort(function(x, y) {
+			return parseInt(x, 10) - parseInt(y, 10);
+		});
 		this.limitIndex = this.elementList.length;
 		this.currentIndex = 0;
 		/**
