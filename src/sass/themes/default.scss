@@ -20,8 +20,7 @@ $accentColor: #4183c4;
     color: $textColor;
     @include box-sizing;
   }
-  h1,
-  .gist-description {
+  h1 {
     @include font-size(4.8,96);
     position: absolute;
     top: 40%;
