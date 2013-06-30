@@ -16,23 +16,10 @@ Please report [issues](https://github.com/1000ch/gistslide/issues).
 
 ## Theme Contributors
 
-<table>
-	<tr>
-		<th>Theme</th><th>Contributor</th>
-	</tr>
-	<tr>
-		<td>Default</td><td>[@hiloki](https://github.com/hiloki)</td>
-	</tr>
-	<tr>
-		<td>Simple</td><td>[@hiloki](https://github.com/hiloki)</td>
-	</tr>
-	<tr>
-		<td>Night</td><td>[@hiloki](https://github.com/hiloki)</td>
-	</tr>
-	<tr>
-		<td>Green</td><td>[@hiloki](https://github.com/hiloki)</td>
-	</tr>
-</table>
++ Default by[@hiloki](https://github.com/hiloki)
++ Simple by [@hiloki](https://github.com/hiloki)
++ Night by [@hiloki](https://github.com/hiloki)
++ Green by [@hiloki](https://github.com/hiloki)
 
 ## Lisence
 
