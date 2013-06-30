@@ -52,13 +52,13 @@
 	/**
 	 * wrap node
 	 * @param {HTMLElement} targetNode
-	 * @param {HTMLElement} wrapNode
+	 * @param {HTMLElement} destNode
 	 */
-	function wrapNode(targetNode, wrapNode) {
+	function wrapNode(targetNode, destNode) {
 		//append clone of targetNode to wrapNode
-		wrapNode.appendChild(targetNode.cloneNode(true));
+		destNode.appendChild(targetNode.cloneNode(true));
 		var parentNode = targetNode.parentNode;
-		parentNode.insertBefore(wrapNode, targetNode);
+		parentNode.insertBefore(destNode, targetNode);
 		parentNode.removeChild(targetNode);
 	}
 
@@ -234,10 +234,6 @@
 		window.setTimeout(function() {
 			//after repaint
 			var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
-			console.log("elementList");
-			console.log(container.elementList);
-			console.log("offsetList");
-			console.log(container.offsetList);
 
 			//listen keydown event
 			doc.addEventListener('keydown', function(e) {
@@ -249,5 +245,4 @@
 			});
 		}, 1500);
 	})();
-
 })();
