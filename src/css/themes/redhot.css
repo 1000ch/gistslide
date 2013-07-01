@@ -214,15 +214,12 @@ html, body, article, div {
   overflow: auto;
   border-radius: 0.2em;
   border: 1px solid #71302e;
-  padding: 0.5em 1em;
   background-color: #71302e;
   color: #fdfffd;
 }
 .gs-theme code {
   border-radius: 0.2em;
   border: 1px solid #71302e;
-  margin: 0 .5em;
-  padding: .2em .5em;
   background-color: #71302e;
   color: #fdfffd;
 }

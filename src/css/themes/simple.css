@@ -215,14 +215,11 @@ html, body, article, div {
   overflow: auto;
   border-radius: 0.2em;
   border: 1px solid #ddd;
-  padding: 0.5em 1em;
   background-color: #f8f8f8;
 }
 .gs-theme code {
   border-radius: 0.2em;
   border: 1px solid #ddd;
-  margin: 0 .5em;
-  padding: .2em .5em;
   background-color: #f8f8f8;
 }
 .gs-theme blockquote {

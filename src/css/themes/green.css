@@ -223,13 +223,10 @@ html, body, article, div {
 .gs-theme pre {
   overflow: auto;
   border-radius: 0.2em;
-  padding: 0.5em 1em;
   background-color: rgba(255, 255, 255, 0.75);
 }
 .gs-theme code {
   border-radius: 0.2em;
-  margin: 0 .5em;
-  padding: .2em .5em;
   background-color: rgba(255, 255, 255, 0.75);
 }
 .gs-theme blockquote {
