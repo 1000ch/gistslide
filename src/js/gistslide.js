@@ -83,7 +83,7 @@
 	 */
 	function removeNode(targetNode) {
 		if(targetNode && targetNode.parentNode) {
-			targetNode.parentNode.removeveChild(targetNode);
+			targetNode.parentNode.removeChild(targetNode);
 		}
 	}
 
