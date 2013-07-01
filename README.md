@@ -20,6 +20,7 @@ Please report [issues](https://github.com/1000ch/gistslide/issues).
 + Simple by hiloki([GitHub](https://github.com/hiloki) / [Twitter](https://twitter.com/hiloki))
 + Night by hiloki([GitHub](https://github.com/hiloki) / [Twitter](https://twitter.com/hiloki))
 + Green by hiloki([GitHub](https://github.com/hiloki) / [Twitter](https://twitter.com/hiloki))
++ Redhot by hiloki([GitHub](https://github.com/hiloki) / [Twitter](https://twitter.com/hiloki))
 
 ## Lisence
 
