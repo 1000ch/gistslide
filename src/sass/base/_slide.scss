@@ -19,7 +19,7 @@ html,body,article,div {
 .gs-theme {
   @include font-size(2.6,48);
   h1 {
-    margin-top: 40%;
+    margin-top: 30%;
     margin-bottom: 1em;
     @include font-size(4.4,96);
   }
@@ -73,5 +73,8 @@ html,body,article,div {
   }
   b,strong {
     font-weight: bold;
+  }
+  .highlight {
+  	background-color: transparent; // Prevent Gist syntax higlighting
   }
 }
