@@ -30,7 +30,8 @@ html,body,article,div {
     @include font-size(2.4,48);
   }
   h2,h3,p,ul,ol,li {
-    margin-bottom: 0.5em;    
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em; 
     line-height: normal;
     @include wrap;
   }
@@ -45,10 +46,23 @@ html,body,article,div {
     list-style: decimal;
   }
   pre {
-    margin-bottom: 0.5em;    
+    overflow: auto;
+    border-radius: 0.2em;
+    margin-top: 0.5em; 
+    margin-bottom: 0.5em; 
     line-height: normal;
+    padding: 0.5em 1em;
     @include pre-wrap;
     @include font-size(2.0,32);
+    > code {
+      border-radius: 0;
+      border: 0 transparent;
+      padding: 0;
+      background-color: #0;
+    }
+  }
+  code {
+    padding: .2em .5em;
   }
   img {
     display: block;

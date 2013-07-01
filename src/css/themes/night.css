@@ -148,6 +148,7 @@ html, body, article, div {
   font-size: 2.4vw;
 }
 .gs-theme h2, .gs-theme h3, .gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
   line-height: normal;
   -ms-word-break: break-all;
@@ -169,8 +170,12 @@ html, body, article, div {
   list-style: decimal;
 }
 .gs-theme pre {
+  overflow: auto;
+  border-radius: 0.2em;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
   line-height: normal;
+  padding: 0.5em 1em;
   white-space: -moz-pre-wrap;
   /* Mozilla, supported since 1999 */
   white-space: -pre-wrap;
@@ -183,6 +188,15 @@ html, body, article, div {
   /* IE 5.5+ */
   font-size: 32px;
   font-size: 2vw;
+}
+.gs-theme pre > code {
+  border-radius: 0;
+  border: 0 transparent;
+  padding: 0;
+  background-color: #0;
+}
+.gs-theme code {
+  padding: .2em .5em;
 }
 .gs-theme img {
   display: block;
@@ -209,14 +223,11 @@ html, body, article, div {
   font-weight: bold;
 }
 .gs-theme pre {
-  overflow: auto;
-  border-radius: 0.2em;
   border: 1px solid black;
   background-color: #f7eacb;
   color: #3E4360;
 }
 .gs-theme code {
-  border-radius: 0.2em;
   border: 1px solid black;
   background-color: #f7eacb;
   color: #3E4360;

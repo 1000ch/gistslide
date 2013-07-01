@@ -29,14 +29,11 @@ $borderColor: #71302E;
     font-weight: bold;
   }
   pre {
-    overflow: auto;
-    border-radius: 0.2em;
     border: 1px solid $borderColor;
     background-color: $borderColor;
     color: $textColor;
   }
   code {
-    border-radius: 0.2em;
     border: 1px solid $borderColor;
     background-color: $borderColor;
     color: $textColor;

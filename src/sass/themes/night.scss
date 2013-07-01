@@ -26,14 +26,11 @@ $accentColor: #F7D33A;
     font-weight: bold;
   }
   pre {
-    overflow: auto;
-    border-radius: 0.2em;
     border: 1px solid darken(#3E4360,50%);
     background-color: $textColor;
     color: #3E4360;
   }
   code {
-    border-radius: 0.2em;
     border: 1px solid darken(#3E4360,50%);
     background-color: $textColor;
     color: #3E4360;
