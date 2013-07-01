@@ -32,15 +32,12 @@ $borderColor: #71302E;
     overflow: auto;
     border-radius: 0.2em;
     border: 1px solid $borderColor;
-    padding: 0.5em 1em;
     background-color: $borderColor;
     color: $textColor;
   }
   code {
     border-radius: 0.2em;
     border: 1px solid $borderColor;
-    margin: 0 .5em;
-    padding: .2em .5em;
     background-color: $borderColor;
     color: $textColor;
   }

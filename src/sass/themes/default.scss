@@ -33,11 +33,16 @@ $accentColor: #4183c4;
     border: 1px solid #ddd;
     padding: 0.5em 1em;
     background-color: #f8f8f8;
+    > code {
+      border-radius: 0;
+      border: 0 transparent;
+      padding: 0;
+      background-color: #0;
+    }
   }
   code {
     border-radius: 0.2em;
     border: 1px solid #ddd;
-    margin: 0 .5em;
     padding: .2em .5em;
     background-color: #f8f8f8;
   }
