@@ -196,6 +196,7 @@ html, body, article, div {
   background-color: #0;
 }
 .gs-theme code {
+  border-radius: 0.2em;
   padding: .2em .5em;
 }
 .gs-theme img {

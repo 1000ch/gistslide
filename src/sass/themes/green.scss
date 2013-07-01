@@ -36,8 +36,10 @@ $accentColor: #EFEFEE;
     font-weight: bold;
   }
   pre {
-    border-radius: 0.2em;
     background-color: rgba(#FFFFFF,0.75);
+    > code {
+      background-color: transparent;
+    }
   }
   code {
     border-radius: 0.2em;
