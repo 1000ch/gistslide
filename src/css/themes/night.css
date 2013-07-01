@@ -135,6 +135,7 @@ html, body, article, div {
 }
 .gs-theme h1 {
   margin-top: 40%;
+  margin-bottom: 1em;
   font-size: 96px;
   font-size: 4.4vw;
 }
