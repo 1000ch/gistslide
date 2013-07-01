@@ -131,21 +131,20 @@ html, body, article, div {
 
 .gs-theme {
   font-size: 48px;
-  font-size: 2.4vw;
+  font-size: 2.6vw;
 }
 .gs-theme h1 {
-  display: table-cell;
-  vertical-align: middle;
+  margin-top: 40%;
   font-size: 96px;
-  font-size: 4.2vw;
+  font-size: 4.4vw;
 }
 .gs-theme h2 {
   font-size: 72px;
-  font-size: 3vw;
+  font-size: 3.2vw;
 }
 .gs-theme h3 {
   font-size: 48px;
-  font-size: 2.4vw;
+  font-size: 2.6vw;
 }
 .gs-theme h2, .gs-theme h3, .gs-theme p, .gs-theme ul, .gs-theme ol, .gs-theme li {
   margin-top: 0.5em;
@@ -187,7 +186,7 @@ html, body, article, div {
   word-wrap: break-word;
   /* IE 5.5+ */
   font-size: 32px;
-  font-size: 2vw;
+  font-size: 2.2vw;
 }
 .gs-theme pre > code {
   border-radius: 0;

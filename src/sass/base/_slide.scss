@@ -17,17 +17,16 @@ html,body,article,div {
 }
 
 .gs-theme {
-  @include font-size(2.4,48);
+  @include font-size(2.6,48);
   h1 {
-    display: table-cell;
-    vertical-align: middle;
-    @include font-size(4.2,96);
+    margin-top: 40%;
+    @include font-size(4.4,96);
   }
   h2 {
-    @include font-size(3.0,72);
+    @include font-size(3.2,72);
   }
   h3 {
-    @include font-size(2.4,48);
+    @include font-size(2.6,48);
   }
   h2,h3,p,ul,ol,li {
     margin-top: 0.5em; 
@@ -53,7 +52,7 @@ html,body,article,div {
     line-height: normal;
     padding: 0.5em 1em;
     @include pre-wrap;
-    @include font-size(2.0,32);
+    @include font-size(2.2,32);
     > code {
       border-radius: 0;
       border: 0 transparent;
