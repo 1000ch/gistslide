@@ -266,10 +266,11 @@
 
 		//get hash string
 		var cssFile;
-		if(win.gistSlideTheme !== undefined) {
+		var hashValue = win.location.hash.replace('#', '');
+		if(hashValue !== "") {
+			cssFile = hashValue;
+		} else if(win.gistSlideTheme !== undefined) {
 			cssFile = win.gistSlideTheme;
-		} else {
-			cssFile = win.location.hash.replace('#', '');
 		}
 		if(!cssFile) {
 			cssFile = "default";
