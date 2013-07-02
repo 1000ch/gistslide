@@ -17,7 +17,7 @@
 	var KEYCODE_BOTTOM = 40;
 
 	/**
-	 * document.querySelector alias
+	 * querySelector alias
 	 * @param {string} selector
 	 * @param {HTMLElement} context
 	 * @returns {Node}
@@ -34,6 +34,36 @@
 	 */
 	var qsa = function(selector, context) {
 		return (context || doc).querySelectorAll(selector);
+	};
+
+	/**
+	 * document.getElementById alias
+	 * @param {string} selector
+	 * @param {HTMLElement} context
+	 * @returns {NodeList}
+	 */
+	var byId = function(id) {
+		return document.getElementById(id);
+	};
+
+/**
+	 * getElementsByClassName alias
+	 * @param {string} selector
+	 * @param {HTMLElement} context
+	 * @returns {Node}
+	 */
+	var byClassName = function(className, context) {
+		return (context || document).getElementsByClassName(className);
+	};
+
+	/**
+	 * getElementsByTagName alias
+	 * @param {string} tagName
+	 * @param {HTMLElement} context
+	 * @returns {Node}
+	 */
+	var byTagName = function(tagName, context) {
+		return (context || document).getElementsByTagName(tagName);
 	};
 
 	/**
@@ -142,7 +172,7 @@
 		this.offsetList.sort(function(x, y) {
 			return parseInt(x, 10) - parseInt(y, 10);
 		});
-		this.limitIndex = this.elementList.length;
+		this.limitIndex = this.elementList.length - 1;
 		this.currentIndex = 0;
 		/**
 		 * slide to index
@@ -198,14 +228,14 @@
 		moveNode(qs(".gs-slide"), document.body);
 
 		//hide elements
-		addClass(qs("#wrapper"), "is-hidden");
-		addClass(qs("#ajax-error-message"), "is-hidden");
+		addClass(byId("wrapper"), "is-hidden");
+		addClass(byId("ajax-error-message"), "is-hidden");
 		addClass(qs("footer"), "is-hidden");
 
 		//get headers under .gs-slide
 		var slideParent = qs(".gs-slide");
-		var header1 = slice.call(qsa('h1', slideParent));
-		var header2 = slice.call(qsa('h2', slideParent));
+		var header1 = slice.call(byTagName('h1', slideParent));
+		var header2 = slice.call(byTagName('h2', slideParent));
 		var headers = header1.concat(header2);
 		//filter element which has secret class
 		headers = filter.call(headers, function(header) {
@@ -221,16 +251,16 @@
 		});
 
 		//move following elements to section.gs-slide-content
-		var slideContainers = qsa(".gs-slide-content", qs(".gs-slide"));
-		forEach.call(slideContainers, function(slideContainer) {
+		var slides = byClassName("gs-slide-content", qs(".gs-slide"));
+		forEach.call(slides, function(slide) {
 			var moveNodeList = [];
-			var element = getSibling(slideContainer);
+			var element = getSibling(slide);
 			while(element && !element.classList.contains("gs-slide-content")) {
 				moveNodeList.push(element);
 				element = getSibling(element);
 			}
 			forEach.call(moveNodeList, function(node) {
-				moveNode(node, slideContainer);
+				moveNode(node, slide);
 			});
 		});
 
@@ -251,7 +281,7 @@
 			//wait for reflow completion
 			window.setTimeout(function() {
 				//after repaint
-				var container = new SlideContainer(qsa(".gs-slide-content",  qs(".gs-slide")));
+				var container = new SlideContainer(byClassName("gs-slide-content",  qs(".gs-slide")));
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
