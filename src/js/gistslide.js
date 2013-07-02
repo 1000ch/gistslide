@@ -265,7 +265,12 @@
 		});
 
 		//get hash string
-		var cssFile = win.location.hash.replace('#', '');
+		var cssFile;
+		if(win.gistSlideTheme !== undefined) {
+			cssFile = win.gistSlideTheme;
+		} else {
+			cssFile = win.location.hash.replace('#', '');
+		}
 		if(!cssFile) {
 			cssFile = "default";
 		}
