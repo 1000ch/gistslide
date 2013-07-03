@@ -215,6 +215,9 @@
 			return;
 		}
 
+		var start = Date.now();
+		console.log("[gistslide]start:" + (Date.now() - start));
+
 		//add .gs-theme to body
 		addClass(document.body, "gs-theme");
 
@@ -303,5 +306,6 @@
 
 		//insert nodes into head tail
 		qs('head').appendChild(linkNode);
+		console.log("[gistslide]end:" + (Date.now() - start));
 	})();
 })();
