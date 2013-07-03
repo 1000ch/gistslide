@@ -230,6 +230,7 @@
 		//hide elements
 		addClass(byId("wrapper"), "is-hidden");
 		addClass(byId("ajax-error-message"), "is-hidden");
+		addClass(qs(".js-task-list-field"), "is-hidden");
 		addClass(qs("footer"), "is-hidden");
 
 		//get headers under .gs-slide
