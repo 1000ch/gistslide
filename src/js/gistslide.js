@@ -288,7 +288,7 @@
 			//wait for reflow completion
 			window.setTimeout(function() {
 				//after repaint
-				var container = new SlideContainer(byClassName("gs-slide-content",  qs(".gs-slide")));
+				var container = new SlideContainer(byClassName("gs-slide-content", qs(".gs-slide")));
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
