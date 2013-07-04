@@ -53,7 +53,7 @@
 	 * @param {HTMLElement} context
 	 * @returns {Node}
 	 */
-	var byClassName = function(className, context) {
+	var byClass = function(className, context) {
 		return (context || document).getElementsByClassName(className);
 	};
 
@@ -63,7 +63,7 @@
 	 * @param {HTMLElement} context
 	 * @returns {Node}
 	 */
-	var byTagName = function(tagName, context) {
+	var byTag = function(tagName, context) {
 		return (context || document).getElementsByTagName(tagName);
 	};
 
@@ -239,8 +239,8 @@
 
 		//get headers under .gs-slide
 		var slideParent = qs(".gs-slide");
-		var header1 = slice.call(byTagName('h1', slideParent));
-		var header2 = slice.call(byTagName('h2', slideParent));
+		var header1 = slice.call(byTag('h1', slideParent));
+		var header2 = slice.call(byTag('h2', slideParent));
 		var headers = header1.concat(header2);
 		//filter element which has secret class
 		headers = filter.call(headers, function(header) {
@@ -256,7 +256,7 @@
 		});
 
 		//move following elements to section.gs-slide-content
-		var slides = byClassName("gs-slide-content", qs(".gs-slide"));
+		var slides = byClass("gs-slide-content", qs(".gs-slide"));
 		forEach.call(slides, function(slide) {
 			var moveNodeList = [];
 			var element = getSibling(slide);
@@ -292,7 +292,7 @@
 			//wait for reflow completion
 			window.setTimeout(function() {
 				//after repaint
-				var container = new SlideContainer(byClassName("gs-slide-content", qs(".gs-slide")));
+				var container = new SlideContainer(byClass("gs-slide-content", qs(".gs-slide")));
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
