@@ -296,12 +296,12 @@
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
-					var keyCode = e.keyCode;
+					var keyCode = patseInt(e.keyCode, 10);
 					if(keyCode === KEYCODE_ENTER) {
 						container.next();
-					} else if(keyCode == KEYCODE_LEFT) {
+					} else if(keyCode === KEYCODE_LEFT) {
 						container.prev();
-					} else if(keyCode == KEYCODE_RIGHT) {
+					} else if(keyCode === KEYCODE_RIGHT) {
 						container.next();
 					}
 				});
