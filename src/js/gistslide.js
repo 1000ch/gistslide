@@ -289,20 +289,21 @@
 		});
 
 		linkNode.addEventListener("load", function() {
-			//wait for reflow completion
+			//wait for re-flow completion
 			window.setTimeout(function() {
 				//after repaint
 				var container = new SlideContainer(byClass("gs-slide-content", qs(".gs-slide")));
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
-					var keyCode = patseInt(e.keyCode, 10);
-					if(keyCode === KEYCODE_ENTER) {
-						container.next();
-					} else if(keyCode === KEYCODE_LEFT) {
-						container.prev();
-					} else if(keyCode === KEYCODE_RIGHT) {
-						container.next();
+					switch(e.keyCode) {
+						case KEYCODE_LEFT:
+							container.prev();
+							break;
+						case KEYCODE_ENTER:
+						case KEYCODE_RIGHT:
+							container.next();
+							break;
 					}
 				});
 			}, 1000);
