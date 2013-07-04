@@ -11,6 +11,7 @@
 	var filter = [].filter;
 
 	//constant
+	var KEYCODE_ENTER = 13;
 	var KEYCODE_LEFT = 37;
 	var KEYCODE_UP = 38;
 	var KEYCODE_RIGHT = 39;
@@ -295,9 +296,12 @@
 
 				//listen keydown event
 				doc.addEventListener('keydown', function(e) {
-					if(e.keyCode == KEYCODE_LEFT) {
+					var keyCode = e.keyCode;
+					if(keyCode === KEYCODE_ENTER) {
+						container.next();
+					} else if(keyCode == KEYCODE_LEFT) {
 						container.prev();
-					} else if(e.keyCode == KEYCODE_RIGHT) {
+					} else if(keyCode == KEYCODE_RIGHT) {
 						container.next();
 					}
 				});
