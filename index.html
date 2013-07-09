@@ -52,14 +52,14 @@
 		<script src=></script>
 		<script src=></script>
 		<script>
-			var fjs = doc.querySelector("script");
+			var fjs = document.querySelector("script");
 			[
 				"https://apis.google.com/js/plusone.js",
 				"//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=453408378012572",
 				"//platform.twitter.com/widgets.js",
 				"http://b.st-hatena.com/js/bookmark_button.js"
 			].forEach(function(url) {
-				var js = doc.createElement("script");
+				var js = document.createElement("script");
 				js.async = true;
 				js.charset = "utf-8";
 				js.src = url;
