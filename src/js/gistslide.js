@@ -298,7 +298,11 @@
 				doc.addEventListener('keydown', function(e) {
 					var keyCode = e.keyCode;
 					if(keyCode === KEYCODE_ENTER) {
-						container.next();
+						if(e.shiftKey) {
+							container.prev();
+						} else {
+							container.next();
+						}
 					} else if(keyCode == KEYCODE_LEFT) {
 						container.prev();
 					} else if(keyCode == KEYCODE_RIGHT) {
