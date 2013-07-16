@@ -5,12 +5,13 @@ html,body,article,div {
 .gs-slide {
   width:100%;
   height:100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .gs-slide-content {
-	@include box-sizing;
-	overflow-x: hidden;
-	display: table;
+  @include box-sizing;
+  overflow-x: hidden;
+  display: table;
   width:100%;
   height:100%;
   padding: 1em;
