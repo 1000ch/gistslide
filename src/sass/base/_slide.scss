@@ -12,9 +12,10 @@ html,body,article,div {
   @include box-sizing;
   overflow-x: hidden;
   display: table;
-  width:100%;
-  height:100%;
+  margin: 0 auto;
   padding: 1em;
+  max-width: 85vw;
+  height:100%;
 }
 
 .gs-theme {
