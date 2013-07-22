@@ -12,8 +12,8 @@ $accentColor: #20C88B;
 
 // Simple
 .gs-theme {
+  background-color: $bgColor;
   .gs-slide-content {
-    background-color: $bgColor;
     color: $textColor;
   }
   h1 {

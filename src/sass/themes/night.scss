@@ -11,8 +11,8 @@ $accentColor: #F7D33A;
 
 // Night
 .gs-theme {
+  background-color: $bgColor;
   .gs-slide-content {
-    background-color: $bgColor;
     color: $textColor;
   }
   h1 {
